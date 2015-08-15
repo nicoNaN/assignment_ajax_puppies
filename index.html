@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AJAX Puppy Shelter</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="pupper.js"></script>
+  <link rel="stylesheet" type="text/css" href="pupper.css">
+<body>
+
+  <header>
+    <h1>The AJAX Puppy Shelter</h1>
+  </header>
+
+  <div class="test"></div>
+
+  <div class="container">
+
+    <section class="register-head">
+      <h2>Register a new puppy<h2>
+    </section>
+
+    <form class="register-form">
+      <p>Name</p>
+      <input type="text" name="name">
+
+      <p>Breed</p>
+      <select name="breeds" class="breeds">
+        <!-- API call returns select options !-->
+      </select>
+      <br/>
+
+      <button type="button">REGISTER PUPPY</button>
+    </form>
+
+    <section class="our-puppies">
+      <h2>Our puppies:</h2>
+      <p><a href="#">Refresh puppies list</a></p>
+
+      <ul class="puppies-list"></ul>
+    </section>
+
+  </div>
+
+  <div id="billiards-table"></div>
+
+</body>
+</html>
