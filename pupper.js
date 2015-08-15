@@ -2,7 +2,9 @@
 
 var jaxCalls = {
 
-  refreshPuppers: function() {
+  refreshPuppers: function(clickEvent) {
+    clickEvent.preventDefault();
+    
     $(".puppies-list").html("");
 
     $.get(
@@ -46,8 +48,8 @@ $(document).ready(function() {
     }
   )
 
-  $(".refresh-puppers").click(function() {
-    jaxCalls.refreshPuppers();
+  $(".refresh-puppers").click(function(click) {
+    jaxCalls.refreshPuppers(click);
   })
 
 })
