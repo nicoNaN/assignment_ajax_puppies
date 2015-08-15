@@ -1,5 +1,26 @@
 "use strict";
 
+var jaxCalls = {
+
+  refreshPuppers: function() {
+    $(".puppies-list").html("");
+
+    $.get(
+      "https://pacific-stream-9205.herokuapp.com/puppies.json",
+
+      function(data) {
+        data.forEach(function(puppy){
+          $(".puppies-list").append("<li>" +
+                                    puppy.name +
+                                    " (" + puppy.breed.name + ")" +
+                                    "</li>");
+        });
+      }
+    )
+  }
+
+}
+
 $(document).ready(function() {
 
   $.get(
@@ -24,5 +45,9 @@ $(document).ready(function() {
       });
     }
   )
+
+  $(".refresh-puppers").click(function() {
+    jaxCalls.refreshPuppers();
+  })
 
 })
